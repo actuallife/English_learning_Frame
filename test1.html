@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>字彙測驗</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    .question { margin-bottom: 20px; }
+    button { padding: 10px 20px; margin-top: 10px; }
+</style>
+</head>
+
+<body>
+<h2>字彙測驗 (Vocabulary Test)</h2>
+
+<div class="question">
+    1. The meeting was ______ due to the typhoon.<br>
+    <input type="radio" name="q1" value="canceled"> canceled<br>
+    <input type="radio" name="q1" value="organized"> organized<br>
+    <input type="radio" name="q1" value="extended"> extended<br>
+</div>
+
+<div class="question">
+    2. Please ______ the form before submitting it.<br>
+    <input type="radio" name="q2" value="complete"> complete<br>
+    <input type="radio" name="q2" value="compete"> compete<br>
+    <input type="radio" name="q2" value="compile"> compile<br>
+</div>
+
+<button onclick="check()">提交答案</button>
+
+<p id="result"></p>
+
+<script>
+function check() {
+    let score = 0;
+    if(document.querySelector('input[name="q1"]:checked')?.value === "canceled") score++;
+    if(document.querySelector('input[name="q2"]:checked')?.value === "complete") score++;
+
+    document.getElementById("result").innerHTML = 
+        "你的得分：" + score + "/2";
+}
+</script>
+
+</body>
+</html>

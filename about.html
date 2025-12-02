@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>製作團隊</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #f2f5f7;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 32px;
+        color: #004c99;
+        letter-spacing: 1px;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .member-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform .2s, box-shadow .2s;
+    }
+
+    .member-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .photo-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .photo-box img {
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .info-title {
+        font-size: 20px;
+        color: #0066cc;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #004c99;
+    }
+
+</style>
+</head>
+
+<body>
+
+<h1>製作團隊</h1>
+
+<div class="team-container">
+
+    <!-- 組員1 -->
+    <div class="member-card">
+        <div class="photo-box">
+            <img src="about_pic/test1_pic.jpg" alt="組員1照片">
+        </div>
+        <div class="info">
+            <div class="info-title">負責主題：字彙測驗</div>
+            <p><span class="highlight">姓名：</span>雲豹</p>
+            <p><span class="highlight">系級：</span>外文系三年級</p>
+            <p><span class="highlight">興趣：</span>百米跑步</p>
+            <p><span class="highlight">專長：</span>獵食</p>
+        </div>
+    </div>
+
+    <!-- 組員2 -->
+    <div class="member-card">
+        <div class="photo-box">
+            <img src="about_pic/test2_pic.jpg" alt="組員2照片">
+        </div>
+        <div class="info">
+            <div class="info-title">負責主題：閱讀測驗</div>
+            <p><span class="highlight">姓名：</span>大象</p>
+            <p><span class="highlight">系級：</span>外文系三年級</p>
+            <p><span class="highlight">興趣：</span>吃</p>
+            <p><span class="highlight">專長：</span>用水噴人</p>
+        </div>
+    </div>
+
+    <!-- 組員3 -->
+    <div class="member-card">
+        <div class="photo-box">
+            <img src="about_pic/test3_pic.jpg" alt="組員3照片">
+        </div>
+        <div class="info">
+            <div class="info-title">負責主題：文法測驗</div>
+            <p><span class="highlight">姓名：</span>犀牛</p>
+            <p><span class="highlight">系級：</span>外文系三年級</p>
+            <p><span class="highlight">興趣：</span>用角戳人</p>
+            <p><span class="highlight">專長：</span>睡覺</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

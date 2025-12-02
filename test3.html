@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>文法測驗</title>
+<style>
+    body { font-family: Arial; padding: 20px; }
+    .question { margin-bottom: 20px; }
+    button { padding: 10px 20px; margin-top: 10px; }
+</style>
+</head>
+
+<body>
+<h2>文法測驗 (Grammar Test)</h2>
+
+<div class="question">
+1. She ______ to the meeting yesterday.<br>
+<input type="radio" name="q1" value="go"> go<br>
+<input type="radio" name="q1" value="went"> went<br>
+<input type="radio" name="q1" value="gone"> gone<br>
+</div>
+
+<div class="question">
+2. If I ______ time, I will help you.<br>
+<input type="radio" name="q2" value="have"> have<br>
+<input type="radio" name="q2" value="had"> had<br>
+<input type="radio" name="q2" value="has"> has<br>
+</div>
+
+<button onclick="check()">提交答案</button>
+
+<p id="result"></p>
+
+<script>
+function check() {
+    let score = 0;
+    if(document.querySelector('input[name="q1"]:checked')?.value === "went") score++;
+    if(document.querySelector('input[name="q2"]:checked')?.value === "have") score++;
+
+    document.getElementById("result").innerHTML = 
+        "你的得分：" + score + "/2";
+}
+</script>
+
+</body>
+</html>

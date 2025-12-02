@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>TOEIC 800 數位學習網站</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        background: #004c99;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    nav {
+        display: flex;
+        background: #0066cc;
+    }
+    nav a {
+        flex: 1;
+        padding: 14px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        border-right: 1px solid #004c99;
+    }
+    nav a:hover {
+        background: #005bb5;
+    }
+    iframe {
+        width: 100%;
+        height: calc(100vh - 120px);
+        border: none;
+    }
+</style>
+</head>
+
+<body>
+
+<header>TOEIC 800 數位學習網站</header>
+
+<nav>
+    <a href="test1.html" onclick="loadPage(event, 'test1.html')">字彙測驗</a>
+    <a href="test2.html" onclick="loadPage(event, 'test2.html')">閱讀測驗</a>
+    <a href="test3.html" onclick="loadPage(event, 'test3.html')">文法測驗</a>
+    <a href="about.html"onclick="loadPage(event, 'about.html')">製作團隊</a>
+</nav>
+
+<iframe id="contentFrame" src="test1.html"></iframe>
+
+<script>
+function loadPage(event, url) {
+    event.preventDefault();
+    document.getElementById("contentFrame").src = url;
+}
+</script>
+</body>
+</html>
